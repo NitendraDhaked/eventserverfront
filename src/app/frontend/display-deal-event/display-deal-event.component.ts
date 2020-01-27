@@ -29,10 +29,7 @@ export class DisplayDealEventComponent implements OnInit {
       this.eventDisplayId = this.addForm.value.eventId;
       this.apiService.getDealLoss(this.addForm.value.eventId)
       .subscribe( data => {
-        if(this.resp.success)
           this.DealLoss = data.result;
-        else
-          this.DealLoss = [];
       });
   }
 
