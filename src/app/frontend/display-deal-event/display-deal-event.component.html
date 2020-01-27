@@ -8,8 +8,6 @@
     <button class="btn btn-success">Submit</button>
   </form>
   <tr *ngFor="let dealLoss of DealLoss">
-    <td class="hidden row-text-align">{{dealLoss.dealId}}</td>
-    <td class="row-text-align">{{dealLoss.zone}}</td>
-    <td class="row-text-align">{{dealLoss.peril}}</td>
-    <td class="row-text-align">{{dealLoss.maxLoss}}</td>
+    <td class="hidden row-text-align">Event {{eventDisplayId}} only affects 
+      deal {{dealLoss.dealId}} and the reinsurance company's loss is {{dealLoss.maxLoss}}</td>
 </div>

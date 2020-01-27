@@ -12,7 +12,7 @@ export class ApiService {
 
 
   getDealLoss(eventId: number): Observable<ApiResponse> {
-    console.log(eventId.valueOf);
+    console.log(eventId);
     return this.http.get<ApiResponse>(`${this.baseUrl}/${eventId}`);
   }
 
