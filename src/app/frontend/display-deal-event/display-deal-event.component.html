@@ -1,0 +1,15 @@
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Display available deals for an event</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="eventId">Enter Event</label>
+      <input formControlName="eventId" placeholder="event" name="eventId" class="form-control" id="eventId">
+    </div>
+    <button class="btn btn-success">Submit</button>
+  </form>
+  <tr *ngFor="let dealLoss of DealLoss">
+    <td class="hidden row-text-align">{{dealLoss.dealId}}</td>
+    <td class="row-text-align">{{dealLoss.zone}}</td>
+    <td class="row-text-align">{{dealLoss.peril}}</td>
+    <td class="row-text-align">{{dealLoss.maxLoss}}</td>
+</div>

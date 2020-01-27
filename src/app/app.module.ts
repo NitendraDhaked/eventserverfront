@@ -1,18 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { routing } from './app-routing';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ApiService } from './services/api.service';
+import { HttpClientModule } from '@angular/common/http';
+import { DisplayDealEventComponent } from './frontend/display-deal-event/display-deal-event.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DisplayDealEventComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    routing,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule  
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
